@@ -10,21 +10,21 @@
 <body>
 
 {{-- include header --}}
-    @include('frontend.partials.header');
+    @include('frontend.partials.header')
 
     
 
     {{--  dynamic  content--}}
 
-@yield('content');
+@yield('content')
 
 
 
 {{-- include footer --}}
-@include('frontend.partials.footer');
+@include('frontend.partials.footer')
 
 
 {{-- include script --}}
-@include('frontend.partials.script');
+@include('frontend.partials.script')
 </body>
 </html>

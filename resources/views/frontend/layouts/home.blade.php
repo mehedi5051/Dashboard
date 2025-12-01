@@ -1,9 +1,10 @@
 
 
-@extends('frontend.app');
+@extends('frontend.app')
 
 
-@section('content');
+@section('content')
+
 
 
 
@@ -224,7 +225,7 @@
 
 
 
-@endsection;
+@endsection
 
 
 

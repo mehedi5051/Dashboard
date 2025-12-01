@@ -11,6 +11,12 @@ Route::get('/dashboard', function () {
     return view('backend.layouts.dashboard', compact('user'));
 })->middleware(['auth', 'verified', 'admin'])->name('dashboard');
 
+
+Route::get('/dashboard/blog', function () {
+ 
+    return view('backend.layouts.blog'  );
+})->middleware(['auth', 'verified', 'admin'])->name('dashboard.blog');
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

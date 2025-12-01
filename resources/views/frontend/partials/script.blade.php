@@ -7,20 +7,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- Latest jQuery --> 
 <script src="{{ asset('frontend/assets/js/jquery-3.6.0.min.js') }}"></script> 
 <!-- popper min js -->
