@@ -1,6 +1,8 @@
     @php
         $user = App\Models\User::first();
     @endphp
+
+    
 <!doctype html>
 <html lang="en" dir="ltr">
 <!-- This "app.blade.php" master page is used for all the pages content present in "views/livewire" except "custom" and "switcher" pages -->
