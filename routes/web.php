@@ -23,7 +23,7 @@ Route::get('/dashboard/blog',[BlogController::class, 'index'])->name('dashboard.
 Route::get('/dashboard/blog/category',[BlogCategoryController::class, 'index'])->name('dashboard.blog.category');
 
  Route::get('/dashboard/blog/category/create',[BlogCategoryController::class, 'create'])->name('dashboard.blog.category.create');
- Route::post('/dashboard/blog/category/store',[BlogCategoryController::class, 'store'])->name('dashboard.blog.category.store');
+ Route::post('/dashboard/blog/category',[BlogCategoryController::class, 'store'])->name('dashboard.blog.category.store');
 
     
 });

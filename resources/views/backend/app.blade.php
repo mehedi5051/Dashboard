@@ -341,9 +341,18 @@
     <!-- Switcher-->
 
     <!-- GLOBAL-LOADER -->
-    <div id="global-loader">
+
+
+    {{-- <div id="global-loader">
         <img src="{{ asset('dashboard/assets/images/loader.svg') }}" class="loader-img" alt="Loader">
-    </div>
+    </div> --}}
+
+
+    {{--    <div id="global-loader">--}}
+{{--        <img src="{{ asset('dashboard/assets/images/loader.svg') }}" class="loader-img" alt="Loader">--}}
+{{--    </div>--}}
+
+
     <!-- /GLOBAL-LOADER -->
 
     <!-- PAGE -->
@@ -486,8 +495,12 @@
 
           @include('backend.partials.sidebar');
 
-          @yield('content')
+          @yield('content');
         </div>
+
+
+
+
 
         <!-- Country-selector modal-->
         <div class="modal fade" id="country-selector">
@@ -1085,27 +1098,15 @@
         </div><!--TASK MODAL ENDS-->
 
 
-        <!-- FOOTER -->
-        <footer class="footer">
-            <div class="container">
-                <div class="row align-items-center flex-row-reverse">
-                    <div class="col-md-12 col-sm-12 text-center">
-                        Copyright © 2022 <a href="#">Noa</a>. Designed with <span
-                            class="fa fa-heart text-danger"></span> by <a href="#"> Spruko </a> All rights
-                        reserved
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- FOOTER CLOSED -->
 
-    </div>
-    <!-- page -->
+
+
+
+
 @include('backend.partials.footer')
 
 </body>
 
 
-<!-- Mirrored from laravel8.spruko.com/noa/index by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 May 2023 13:08:40 GMT -->
 
 </html>
