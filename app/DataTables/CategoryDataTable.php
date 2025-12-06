@@ -24,7 +24,7 @@ class CategoryDataTable extends DataTable
         
         return (new EloquentDataTable($query))
         ->addColumn('image', function($row) {
-            return '<img src="'.asset($row->image).'" width = "100"   />';
+            return '<img src="'.asset($row->image).'" width = "70"   />';
 
         })
         
@@ -87,17 +87,20 @@ class CategoryDataTable extends DataTable
     public function getColumns(): array
     {
         return [
-            Column::computed('action')
-                  ->exportable(false)
-                  ->printable(false)
-                  ->width(60)
-                  ->addClass('text-center'),
+      
+  
             Column::make('id'),
             Column::make('name'),
             Column::make('image'),
             Column::make('add your columns'),
             Column::make('created_at'),
             Column::make('updated_at'),
+            Column::computed('action')
+                  ->exportable(false)
+                  ->printable(false)
+                  ->width(100)
+                  ->addClass('text-center'),    
+            
         ];
     }
 

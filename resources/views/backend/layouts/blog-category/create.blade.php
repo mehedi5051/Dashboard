@@ -1,6 +1,5 @@
 @extends('backend.app')
-@section('content');
-
+@section('content')
     <!--app-content open-->
     <div class="app-content main-content mt-0">
         <div class="side-app">
@@ -21,7 +20,7 @@
                                         action="{{ route('dashboard.blog.category.store') }}" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group">
-                                            <label for="defaultconfig" class="form-label">Name:</label>
+                                            <label for="defaultconfig" class="form-label">Name :</label>
                                             <input name="name" type="text" class="form-control" maxlength="25"
                                                 id="defaultconfig">
                                             @error('name')
@@ -49,5 +48,5 @@
     </div>
     </div>
     <!-- CONTAINER CLOSED -->
-@endsection;
+@endsection
 
