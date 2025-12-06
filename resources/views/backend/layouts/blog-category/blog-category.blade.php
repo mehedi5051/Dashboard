@@ -1,5 +1,11 @@
 @extends('backend.app')
+
+@push('styles')
+    
+@endpush
 @section('content')
+
+
   <!--app-content open-->
                 <div class="app-content main-content mt-0">
                     <div class="side-app">
@@ -17,3 +23,7 @@
                 </div>
                     <!-- CONTAINER CLOSED -->
 @endsection
+
+@push('scripts')
+
+@endpush

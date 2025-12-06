@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers\Web\Dashboard;
 
+use App\DataTables\CategoryDataTable;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use App\Models\category;
 class BlogCategoryController extends Controller
 {
-     function index(){
-        return view('backend.layouts.blog-category.blog-category');
+     function index(CategoryDataTable $datatable){
+        return $datatable->render('backend.layouts.blog-category.blog-category');
     }
 
 

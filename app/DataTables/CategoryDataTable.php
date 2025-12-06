@@ -20,13 +20,24 @@ class CategoryDataTable extends DataTable
      * @param QueryBuilder<Category> $query Results from query() method.
      */
     public function dataTable(QueryBuilder $query): EloquentDataTable
-    {
+    { 
+        
         return (new EloquentDataTable($query))
-      
+        ->addColumn('image', function($row) {
+            return '<img src="'.asset($row->image).'" width = "100"   />';
+
+        })
+        
+        ->addColumn('name', function($row){
+            return $row->name;
+        })
+
+
             ->addColumn('action', 'category.action')
             ->setRowId('id');
+       
     }
-
+  
     /**
      * Get the query source of dataTable.
      *
@@ -48,14 +59,26 @@ class CategoryDataTable extends DataTable
                     ->minifiedAjax()
                     ->orderBy(1)
                     ->selectStyleSingle()
-                    ->buttons([
-                        Button::make('excel'),
-            Button::make('csv'),
-            Button::make('pdf'),
-            Button::make('print'),
-            Button::make('reset'),
-            Button::make('reload')
+                    ->parameters([
+                        'dom' => 'Bfrtip',
+                        'buttons'=>[
+                            'copy', 'csv', 'excel'
+                        ],
                     ]);
+
+
+
+
+            //         ->buttons([
+            //             Button::make('excel'),
+            // Button::make('csv'),
+            // Button::make('pdf'),
+            // Button::make('print'),
+            // Button::make('reset'),
+            // Button::make('reload')
+            //         ]);
+
+
     }
 
     /**
@@ -70,6 +93,8 @@ class CategoryDataTable extends DataTable
                   ->width(60)
                   ->addClass('text-center'),
             Column::make('id'),
+            Column::make('name'),
+            Column::make('image'),
             Column::make('add your columns'),
             Column::make('created_at'),
             Column::make('updated_at'),
